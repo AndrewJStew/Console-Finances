@@ -104,8 +104,44 @@ netSum = finances.reduce((collect, value) => {
 }, 0);
 
 console.log(`Total sum: £${netSum}`);
-//Average chnages of Profit/Losses
+//Average changes of Profit/Losses - loop - to work out the changes I'm going to need to reverse the date and amounts
+
+let reverseDate = []; // array for reveresed date
+
+let reverseAmount = []; // array for reversed amount
+
+// loop to reverse finances and get the data
+
+for (let i = totalMonths - 1; i >= 0; i--) {
+  const [date, amount] = finances[i];
+
+  //console.log(data);
+  //console.log(amount);
+
+  //parse the data
+
+  reverseDate.push(date)
+  reverseAmount.push(amount);
+}
+
+let averageChanges = [] // array for my average chanages
+let totalchanges = 0 //Variable for the my total average changes
+
+for (let i = 0; i < totalMonths - 1; i++) {
+  averageChanges.push(reverseAmount[i] - reverseAmount[i + 1]);
+  totalchanges += averageChanges[i];
+}
+
+const avgProfitLoss = totalchanges / averageChanges.length;
+console.log(`Average change: ${avgProfitLoss.toFixed(2)}`);
 
 //Greatest increase in profits
+//find the highest monthly change and match it with the date
+const maxProfit = Math.max(...averageChanges);
+
+const maxProfitDate = reverseDate[60]
+
+console.log(`Increase in profits: ${maxProfitDate} £${maxProfit}`);
+
 
 //Greatest decrease in profits
