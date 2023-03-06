@@ -87,7 +87,12 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+console.log(`Finances \n-----------------------`)
+
 //Total number of months
+
+const totalMonths = finances.length;
+console.log(`Total Number of months: ${totalMonths}`);
 
 //Net total of Profit/Losses
 
