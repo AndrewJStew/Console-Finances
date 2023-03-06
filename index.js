@@ -88,6 +88,7 @@ var finances = [
 ];
 
 console.log(`Finances \n-----------------------`)
+//I initially skipped this challenge and have returned at a later date with more JS learned
 
 //Total number of months
 
@@ -95,7 +96,14 @@ const totalMonths = finances.length;
 console.log(`Total Number of months: ${totalMonths}`);
 
 //Net total of Profit/Losses
+let netSum = 0;
 
+// Arrow function - reduce method - to pass a return value from the calc on the preceding element
+netSum = finances.reduce((collect, value) => {
+  return collect + value[1];
+}, 0);
+
+console.log(`Total sum: £${netSum}`);
 //Average chnages of Profit/Losses
 
 //Greatest increase in profits
