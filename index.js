@@ -141,7 +141,12 @@ const maxProfit = Math.max(...averageChanges);
 
 const maxProfitDate = reverseDate[60]
 
-console.log(`Increase in profits: ${maxProfitDate} £${maxProfit}`);
-
-
 //Greatest decrease in profits
+const maxLoss = Math.min(...averageChanges);
+
+maxLossDate = reverseDate[41];
+
+console.log(`Greatest Increase in Profits/Losses: ${maxProfitDate} £${maxProfit}`);
+console.log(`Greatest Decrease in Profits/Losses: ${maxLossDate} £${maxLoss}`);
+
+
