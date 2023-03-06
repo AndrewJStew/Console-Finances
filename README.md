@@ -24,4 +24,5 @@ The only issue I had was this challenge is that when it was set I wasn't confide
 Open the html file index.html and visit the console. Here you will see the tasks set out in the challenged logged.
 
 ## Example
+![Screenshot 2023-03-06 at 20 35 16](https://user-images.githubusercontent.com/117686053/223225247-43a00a99-4dc9-46bc-befc-d2c963a3c689.png)
 
